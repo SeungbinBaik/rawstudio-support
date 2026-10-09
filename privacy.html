@@ -24,7 +24,7 @@
 <body>
 <main>
   <h1>RawStudio</h1>
-  <p class="sub">Privacy policy. Last updated 21 September 2026.</p>
+  <p class="sub">Privacy policy. Last updated 9 October 2026.</p>
 
   <p>
     RawStudio collects nothing. There is no account, no analytics, no advertising
@@ -33,7 +33,7 @@
   </p>
   <ul>
     <li><strong>Your photographs</strong> stay on your device. Editing, subject
-      detection and export all happen locally.</li>
+      detection, face detection and export all happen locally.</li>
     <li><strong>Photo library access</strong> is used only to open the picture you
       choose and to save the one you export.</li>
     <li><strong>Purchases</strong> are handled by Apple. RawStudio is told only
@@ -41,6 +41,68 @@
     <li><strong>No data is shared</strong> with the developer or with any third
       party, because none is collected.</li>
   </ul>
+  <h2 id="face-data">Face data</h2>
+  <p>
+    These tools in RawStudio work with faces: <strong>Skin Smoothing</strong>,
+    the <strong>Face</strong> tab (Eye Size, Nose Width, Smile, Face Width), and
+    the <strong>Subject</strong> and <strong>Background</strong> masks. This
+    section is everything they do with faces.
+  </p>
+
+  <p class="q" id="face-data-what">What face data is used</p>
+  <p>
+    When Skin Smoothing or a Face slider is away from zero (because you moved
+    it, or because you reopened a photograph you edited that way), RawStudio
+    asks Apple's Vision framework, on your device, where the faces are in the
+    photograph you are editing, and where points along each face's outline,
+    eyes, eyebrows, nose and lips lie. From those points it works out which
+    pixels are skin and the skin's average colour and brightness, so that only
+    skin is smoothed and only the features you chose are reshaped. When you add
+    a Subject or Background mask, Vision is also asked whether the photograph has a face or a
+    person in it at all, which gives back only rectangles.
+  </p>
+  <p>
+    RawStudio does not use the camera, the TrueDepth camera, ARKit or Face ID.
+    It does not make face templates, faceprints or any other identifier, and it
+    cannot tell who a person is.
+  </p>
+
+  <p class="q" id="face-data-use">How it is used</p>
+  <p>
+    Only to make the edit you asked for, to that photograph, on screen and in
+    the file you export. It is never used to identify or recognise anyone, and
+    never for advertising, marketing, analytics, profiling, data mining or
+    training any model.
+  </p>
+
+  <p class="q" id="face-data-storage">Where it is stored</p>
+  <p>
+    In the app's memory on your device, while the photograph is open.
+    RawStudio never writes face data to storage. The record it keeps so you can
+    reopen your work holds your slider values (for example &ldquo;Eye Size
+    +20&rdquo;), not face points or measurements, and an exported photograph
+    holds the edited picture and its original camera details, never the face
+    data described here.
+    Because it is never stored, it is in no backup, and it never reaches iCloud
+    or any server.
+  </p>
+
+  <p class="q" id="face-data-retention">How long it is kept, and deletion</p>
+  <p>
+    Only while the photograph is open. It is discarded, at the latest, when you
+    close the photograph, open another one or quit the app, and is worked out
+    again if you reopen the photograph. Nothing is left afterwards to delete.
+    Your saved slider values go back to zero when you reset the photograph, and
+    are removed with the app.
+  </p>
+
+  <p class="q" id="face-data-sharing">Sharing</p>
+  <p>
+    Face data is not shared with the developer or with any third party, and it
+    never leaves your device. RawStudio has no servers, no analytics and no
+    third-party code that could receive it.
+  </p>
+
   <p>
     If this ever changes, this page changes with it, before the version that
     changes it ships.
